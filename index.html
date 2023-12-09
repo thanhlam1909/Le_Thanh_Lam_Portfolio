@@ -5,18 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
-
+  <title>Le_Thanh_Lam's Portfolio</title>
   <!--
     - favicon
   -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
   <!--
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
   <!--
     - google font link
   -->
@@ -24,25 +21,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
   <!--
     - #MAIN
   -->
-
   <main>
-
     <!--
       - #SIDEBAR
     -->
-
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Lê Thanh Lâm" width="80">
+          <img src="./assets/images/Avatar.png" alt="Lê Thanh Lâm" width="80">
         </figure>
 
         <div class="info-content">
@@ -52,10 +44,11 @@
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Thông tin liên lạc</span>
+          <span></span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
+        <a class="download-cv" href="/assets/file/Le_Thanh_Lam_CV.pdf" download="Le_Thanh_Lam_CV.pdf">Download CV</a>
 
       </div>
 
@@ -68,7 +61,7 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+              <img src="/assets/images/mail.png" alt="mail">
             </div>
 
             <div class="contact-info">
@@ -82,7 +75,7 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <img src="/assets/images/phone.png" alt="phone">
             </div>
 
             <div class="contact-info">
@@ -96,7 +89,7 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
+              <img src="/assets/images/birthday.png" alt="birthday">
             </div>
 
             <div class="contact-info">
@@ -110,7 +103,7 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
+              <img src="/assets/images/location.png" alt="location">
             </div>
 
             <div class="contact-info">
@@ -120,7 +113,28 @@
             </div>
 
           </li>
+          <li class="contact-item">
 
+            <div class="icon-box">
+              <img src="/assets/images/linked-in.png" alt="linked-in">
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Linkedin</p>
+              <a href="https://www.linkedin.com/in/l%C3%A2m-l%C3%AA-thanh-4aa5032a3/" class="contact-link" target="_blank">https://www.linkedin.com/in/l%C3%A2m-l%C3%AA-thanh-4aa5032a3/</a>
+            </div>
+          </li>
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <img src="/assets/images/github.png" alt="github">
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Github</p>
+              <a href="https://github.com/thanhlam1909" class="contact-link" target="_blank">https://github.com/thanhlam1909</a>
+            </div>
+          </li>
         </ul>
 
         <div class="separator"></div>
@@ -179,12 +193,7 @@
     
               <li class="navbar-item">
                 <button class="navbar-link" data-nav-link>Portfolio</button>
-              </li>
-    
-              <li class="navbar-item">
-                <button class="navbar-link" data-nav-link>Blog</button>
-              </li>
-    
+              </li>   
               <li class="navbar-item">
                 <button class="navbar-link" data-nav-link>Contact</button>
               </li>
@@ -207,11 +216,13 @@
         </header>
         <section class="about-text">
             <p>
-                Xin chào, tôi là một sinh viên năm 4 đến từ Thành phố Hồ Chí Minh, Việt Nam. Tôi thích thách thức và mong muốn giải quyết những vấn đề phức tạp bằng cách đơn giản hóa chúng. Trong quãng thời gian học, tôi đã tích lũy kiến thức và kỹ năng cần thiết để xây dựng những trang web kết hợp mượt mà giữa chức năng và thiết kế tinh tế.
-            </p>
-            <p>
-                Nhiệm vụ của tôi không chỉ là xây dựng trang web mà còn là tạo ra những sản phẩm phản ánh đặc trưng cá nhân của khách hàng. Tôi ưu tiên việc thêm vào mỗi dự án một chút cá nhân hóa, đảm bảo rằng sản phẩm không chỉ đẹp mắt mà còn dễ sử dụng.
-            </p>
+              I am currently a fourth-year student, eager to contribute in the front-end
+              field to provide effective IT solutions. I am seeking opportunities for
+              internships or employment to apply my knowledge and develop skills
+              with HTML, CSS, JavaScript. My goal is to contribute to user
+              experience enhancement and improve my working capabilities.
+                          </p>
+
         </section>
         
 
@@ -220,7 +231,7 @@
           - service
         -->
 
-        <section class="service">
+        <!-- <section class="service">
 
           <h3 class="h3 service-title">What i'm doing</h3>
 
@@ -293,111 +304,7 @@
 
           </ul>
 
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
+        </section> -->
 
         <!--
           - testimonials modal
@@ -470,7 +377,7 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <img src="/assets/images/Education.png" alt="Education">
             </div>
 
             <h3 class="h3">Education</h3>
@@ -487,33 +394,66 @@
 
           </ol>
         </section>
+        <section class="tools_technologies">
 
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
+          <h3 class="h3 skills-title">TOOLS & TECHNOLOGIES
+          </h3>
 
           <ul class="skills-list content-card">
 
             <li class="skills-item">
 
               <div class="title-wrapper">
+                <img src="/assets/images/Html.png" alt="HTML">
                 <h5 class="h5">HTML</h5>
-
               </div>
-
-              
-
             </li>
-
             <li class="skills-item">
               <div class="title-wrapper">
+                <img src="/assets/images/css.png" alt="css">
                 <h5 class="h5">CSS</h5>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <img src="/assets/images/php.png" alt="PHP">
+                <h5 class="h5">PHP</h5>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <img src="/assets/images/Javascript.png" alt="JavaScript">
+                <h5 class="h5">JavaScript</h5>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <img src="/assets/images/tải_xuống__11_-removebg-preview.png" alt="C#.NET">
+                <h5 class="h5">C#</h5>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <img src="/assets/images/MS-sql-server.svg" alt="MS-sql-server">
+                <h5 class="h5">Sql Server</h5>
+              </div>
+            </li>
+          <li class="skills-item">
+              <div class="title-wrapper">
+                <img src="/assets/images/VSCODE.png" alt="VsCode">
+                <h5 class="h5">VsCode</h5>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <img src="/assets/images/VISUALSTUDIO.png" alt="VisualStudio">
+                <h5 class="h5">VisualStudio</h5>
               </div>
             </li>
           </ul>
 
         </section>
-
+        
       </article>
 
 
@@ -527,7 +467,7 @@
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Project</h2>
         </header>
 
         <section class="projects">
@@ -537,19 +477,6 @@
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
           </ul>
 
           <div class="filter-select-box">
@@ -574,13 +501,6 @@
                 <button data-select-item>Web design</button>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
 
             </ul>
 
@@ -605,151 +525,6 @@
 
               </a>
             </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
           </ul>
 
         </section>
@@ -788,7 +563,10 @@
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+                <button class="send-message-button">
+                  <span class="octicon octicon-mail"></span>
+                  <span>Send Message</span>
+              </button>
             </button>
 
           </form>
@@ -811,11 +589,7 @@
   -->
   <script src="./assets/js/script.js"></script>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 
