@@ -25,7 +25,8 @@ A web application for a laptop store showcasing various products, including sear
 
 ### 3. [Portfolio Website](https://github.com/thanhlam1909/Le_Thanh_Lam)
 This portfolio project where you can find detailed information about me, my skills, and my past work.
-
+ ### 4. [Clothes Store Ver 2](https://github.com/thanhlam1909/21BITV03_Nhom04_website_clothes)
+An  website for a clothing store featuring product filtering, shopping cart functionality, and responsive design.
 ## Contact
 
 - **Email**: [lethanhlam9287@gmail.com](mailto:lethanhlam9287@gmail.com)
