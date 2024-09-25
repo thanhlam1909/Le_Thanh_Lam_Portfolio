@@ -1,163 +1,177 @@
-'use strict';
+'use strict';  // Kích hoạt chế độ nghiêm ngặt của JavaScript để giúp tìm lỗi cú pháp và những hành vi không rõ ràng.
+
+// Hàm toggle class cho phần tử
+const elementToggleFunc = function (elem) { 
+  elem.classList.toggle("active"); // Thêm hoặc xóa class "active" khỏi phần tử được chọn
+}
 
 
+// *** Sidebar ***
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-// sidebar variables
+// Lấy các phần tử liên quan đến sidebar
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+// Thêm sự kiện click cho nút sidebar trên di động
+sidebarBtn.addEventListener("click", function () { 
+  elementToggleFunc(sidebar); // Khi click, sidebar sẽ mở hoặc đóng
+});
 
 
+// *** Testimonials (Lời chứng thực) ***
 
-// testimonials variables
+// Lấy tất cả các mục testimonials
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
-// modal variable
+// Lấy các phần tử trong modal (cửa sổ hiển thị thông tin chi tiết)
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-// modal toggle function
+// Hàm toggle cho modal (mở/đóng modal)
 const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
-// add click event to all modal items
+// Thêm sự kiện click cho tất cả các mục testimonials
 for (let i = 0; i < testimonialsItem.length; i++) {
-
   testimonialsItem[i].addEventListener("click", function () {
 
+    // Cập nhật nội dung trong modal khi một mục testimonials được click
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
+    // Mở modal
     testimonialsModalFunc();
-
   });
-
 }
 
-// add click event to modal close button
+// Thêm sự kiện click để đóng modal
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
 
+// *** Custom Select (Dropdown tùy chỉnh) ***
 
-// custom select variables
+// Lấy các phần tử cho custom select
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+// Toggle custom select khi click
+select.addEventListener("click", function () { 
+  elementToggleFunc(this); 
+});
 
-// add event in all select items
+// Thêm sự kiện click cho tất cả các mục trong custom select
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
+    let selectedValue = this.innerText.toLowerCase();  // Lấy giá trị được chọn
+    selectValue.innerText = this.innerText;  // Hiển thị giá trị được chọn trong custom select
+    elementToggleFunc(select);  // Đóng custom select
+    filterFunc(selectedValue);  // Thực hiện chức năng lọc dựa trên giá trị được chọn
   });
 }
 
-// filter variables
+
+// *** Filter (Lọc) ***
+
+// Lấy tất cả các mục cần lọc
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
+// Hàm lọc các mục
 const filterFunc = function (selectedValue) {
-
   for (let i = 0; i < filterItems.length; i++) {
 
+    // Nếu giá trị được chọn là "all", hiển thị tất cả các mục
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } 
+    // Nếu giá trị khớp với dataset category của mục, hiển thị mục đó
+    else if (selectedValue === filterItems[i].dataset.category) {
       filterItems[i].classList.add("active");
-    } else {
+    } 
+    // Ẩn các mục khác
+    else {
       filterItems[i].classList.remove("active");
     }
-
   }
-
 }
 
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+// Thêm sự kiện click cho các nút lọc trên màn hình lớn
+let lastClickedBtn = filterBtn[0];  // Lưu trữ nút đã được click trước đó (mặc định là nút đầu tiên)
 
 for (let i = 0; i < filterBtn.length; i++) {
-
   filterBtn[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+    let selectedValue = this.innerText.toLowerCase();  // Lấy giá trị từ nút được click
+    selectValue.innerText = this.innerText;  // Cập nhật custom select với giá trị vừa chọn
+    filterFunc(selectedValue);  // Thực hiện chức năng lọc
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
+    lastClickedBtn.classList.remove("active");  // Loại bỏ class "active" khỏi nút trước đó
+    this.classList.add("active");  // Thêm class "active" cho nút hiện tại
+    lastClickedBtn = this;  // Cập nhật nút hiện tại làm nút cuối cùng được click
   });
-
 }
 
 
+// *** Form liên hệ ***
 
-// contact form variables
+// Lấy các phần tử liên quan đến form
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
+// Thêm sự kiện input cho tất cả các trường form
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
 
-    // check form validation
+    // Kiểm tra tính hợp lệ của form
     if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
+      formBtn.removeAttribute("disabled");  // Kích hoạt nút gửi nếu form hợp lệ
     } else {
-      formBtn.setAttribute("disabled", "");
+      formBtn.setAttribute("disabled", "");  // Vô hiệu hóa nút gửi nếu form không hợp lệ
     }
-
   });
 }
 
 
+// *** Điều hướng trang ***
 
-// page navigation variables
+// Lấy các liên kết điều hướng và các trang
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
+// Thêm sự kiện click cho các liên kết điều hướng
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
+    // Kiểm tra trang nào tương ứng với liên kết và hiển thị trang đó
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0);  // Cuộn lên đầu trang
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
     }
-
   });
 }
 
+
+// *** Gửi Email ***
+
+// Hàm gửi email
 function emailSend() {
   var userName = document.getElementById('fullname').value;
   var email = document.getElementById('email').value;
@@ -184,3 +198,11 @@ function emailSend() {
   });
 }
 
+
+// *** Cập nhật nội dung của phần tử có class "title" ***
+
+// Lấy phần tử <p> có class "title"
+var titleElement = document.querySelector('.title');
+
+// Lấy giá trị của thuộc tính title và đặt nó làm nội dung văn bản
+titleElement.textContent = titleElement.getAttribute('title');
