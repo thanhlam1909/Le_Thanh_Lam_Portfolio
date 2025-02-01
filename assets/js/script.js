@@ -171,7 +171,14 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // *** Gửi Email ***
 require('dotenv').config();
+const express = require('express');
+const app = express();
 
+const PORT = process.env.PORT || 3000;  // Đọc cổng từ môi trường hoặc dùng cổng mặc định
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 // Hàm gửi email
 function emailSend() {
   var userName = document.getElementById('fullname').value;
