@@ -171,14 +171,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // *** Gửi Email ***
 require('dotenv').config();
-const express = require('express');
-const app = express();
 
-const PORT = process.env.PORT || 3000;  // Đọc cổng từ môi trường hoặc dùng cổng mặc định
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
 // Hàm gửi email
 function emailSend() {
   var userName = document.getElementById('fullname').value;
@@ -190,20 +183,20 @@ function emailSend() {
                     "<br/> Message: " + message;
 
   Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: process.env.SMTP_USERNAME, // Lấy từ biến môi trường
-        Password: process.env.SMTP_PASSWORD, // Lấy từ biến môi trường
-        To: 'lethanhlam9287@gmail.com',
-        From: 'lethanhlam9287@gmail.com',
-        Subject: "New Message from " + userName,
-        Body: messageBody
-    }).then(function(message) {
-        if (message == 'OK') {
-            console.log("Email has been sent successfully!");
-        } else {
-            console.log("Failed to send email!");
-        }
-    });
+      Host: "smtp.elasticemail.com",
+      Username: "ghenhot12@gmail.com", 
+      Password: "92BB4A290BA948FD6A920B210686226A9816", 
+      To: 'lethanhlam9287@gmail.com',
+      From: 'lethanhlam9287@gmail.com', 
+      Subject: "New Message from " + userName,
+      Body: messageBody
+  }).then(function(message) {
+      if (message == 'OK') {
+          swal("Success", "Email has been sent successfully!", "success");
+      } else {
+          swal("Error", "Failed to send email!", "error");
+      }
+  });
 }
 
 
