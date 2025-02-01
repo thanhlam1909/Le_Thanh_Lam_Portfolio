@@ -170,7 +170,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 // *** Gửi Email ***
-require('dotenv').config();
 
 // Hàm gửi email
 function emailSend() {
