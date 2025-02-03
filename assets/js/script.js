@@ -169,37 +169,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-// *** Gửi Email ***
-
-// Hàm gửi email
-function emailSend() {
-  var userName = document.getElementById('fullname').value;
-  var email = document.getElementById('email').value;
-  var message = document.getElementById('message').value;
-
-  var messageBody = "Name: " + userName +
-                    "<br/> Email: " + email +
-                    "<br/> Message: " + message;
-
-  Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "ghenhot12@gmail.com", 
-      Password: "92BB4A290BA948FD6A920B210686226A9816", 
-      To: 'lethanhlam9287@gmail.com',
-      From: 'lethanhlam9287@gmail.com', 
-      Subject: "New Message from " + userName,
-      Body: messageBody
-  }).then(function(message) {
-      if (message == 'OK') {
-          swal("Success", "Email has been sent successfully!", "success");
-      } else {
-          swal("Error", "Failed to send email!", "error");
-      }
-  });
-}
-
-
-// *** Cập nhật nội dung của phần tử có class "title" ***
 
 // Lấy phần tử <p> có class "title"
 var titleElement = document.querySelector('.title');

@@ -1,7 +1,0 @@
-
-About Me
-I am Lê Thanh Lâm, a Software Developer passionate about building innovative and user-friendly web solutions. With a solid foundation in HTML, CSS, JavaScript,PHP and C#, I am always eager to learn new technologies and improve my skill set. I focus on front-end development, but I have experience across full-stack development, particularly with C# and SQL Server databases.
-
-Currently, I am looking for opportunities to apply my expertise in a professional setting, contribute to impactful projects, and grow in a collaborative environment. Whether working on responsive designs, dynamic applications, or database-driven projects, my goal is to create seamless user experiences and efficient systems.
-
-Feel free to explore my projects and reach out if you'd like to collaborate or learn more about my work!
